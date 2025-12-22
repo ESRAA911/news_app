@@ -24,6 +24,20 @@ The app supports authentication and browsing news by category with proper state 
 - Bloc / Flutter Bloc
 
 ---
+## 🧠 Implementation Approach
+
+This project follows a **feature-based clean architecture** to ensure scalability, maintainability, and clear separation of concerns.
+
+Each feature (such as `auth` and `home`) is organized into its own folder and divided into:
+- **Views**: UI screens responsible for rendering widgets and handling user interaction.
+- **Widgets**: Reusable UI components to keep views clean and readable.
+- **Bloc** (Home feature): Handles business logic and state management using the Bloc pattern.
+- **Data Layer**: Contains models and repositories responsible for data handling and API communication.
+
+State management is implemented using **Bloc**, which helps separate business logic from UI and makes the app easier to test and extend.
+
+Shared resources such as constants are placed inside the `core` folder to avoid duplication and improve reusability across features.
+
 
 ## 📂 Project Structure
 ```
