@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news/core/contstants/api_colors.dart';
+import 'package:news/features/auth/views/login_view.dart';
 import 'package:news/features/home/bloc/news_bloc.dart';
 import 'package:news/features/home/bloc/news_event.dart';
 import 'package:news/features/home/widgets/categories_list_view.dart';
@@ -45,7 +47,16 @@ class _HomeViewState extends State<HomeView> {
               Text('News', style: TextStyle(color: Colors.black)),
               Text('Cloud', style: TextStyle(color: Colors.orange)),
             ],
+            
           ),
+          actions: [
+            IconButton(
+              onPressed: ()async{
+                await FirebaseAuth.instance.signOut();
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginView()));
+              },
+              icon: Icon(Icons.exit_to_app,color: kButtonsColor,))
+          ],
         ),
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.w),

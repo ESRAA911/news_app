@@ -5,6 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news/features/auth/views/login_view.dart';
+import 'package:news/features/auth/views/signup_view.dart';
 import 'package:news/features/home/bloc/news_bloc.dart';
 import 'package:news/features/home/data/repos/news_repo.dart';
 import 'package:news/features/home/views/home_view.dart';
@@ -49,7 +50,7 @@ class _MyAppState extends State<MyApp> {
           title: 'News App',
           theme: ThemeData(primarySwatch: Colors.blue),
           home: FirebaseAuth.instance.currentUser == null
-              ? LoginView()
+              ? SignupView()
               : HomeView(),
         ),
       ),
