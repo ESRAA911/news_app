@@ -1,11 +1,11 @@
-# 📰 News App (Flutter)
+#  News App (Flutter)
 
 A Flutter news application built with Flutter using a clean, feature-based architecture.  
 The app supports authentication and browsing news by category with proper state management.
 
 ---
 
-## 🚀 Features
+##  Features
 - User Authentication (Login & Signup)
 - Browse news by categories
 - State management using Bloc
@@ -24,7 +24,7 @@ The app supports authentication and browsing news by category with proper state 
 - Bloc / Flutter Bloc
 
 ---
-## 🧠 Implementation Approach
+##  Implementation Approach
 
 This project follows a **feature-based clean architecture** to ensure scalability, maintainability, and clear separation of concerns.
 
@@ -39,7 +39,7 @@ State management is implemented using **Bloc**, which helps separate business lo
 Shared resources such as constants are placed inside the `core` folder to avoid duplication and improve reusability across features.
 
 
-## 📂 Project Structure
+##  Project Structure
 ```
 lib/
  ├── core/
@@ -87,24 +87,24 @@ lib/
 
 ---
 
-## ⚙️ Setup Instructions
+##  Setup Instructions
 
-### 1️⃣ Clone the repository
+### 1️- Clone the repository
 ```bash
 git clone https://github.com/ESRAA911/news_app.git
 ```
 
-### 2️⃣ Navigate to the project directory
+### 2- Navigate to the project directory
 ```bash
 cd news_app
 ```
 
-### 3️⃣ Install dependencies
+### 3️- Install dependencies
 ```bash
 flutter pub get
 ```
 
-### 4️⃣ Run the app
+### 4️- Run the app
 ```bash
 flutter run
 ```
