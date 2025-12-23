@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news/core/contstants/api_colors.dart';
+import 'package:news/features/auth/views/signup_view.dart';
 import 'package:news/features/auth/widgets/custom_text.dart';
 import 'package:news/features/auth/widgets/email_text_field.dart';
 import 'package:news/features/auth/widgets/password_text_field.dart';
@@ -106,6 +107,36 @@ class LoginView extends StatelessWidget {
                     ),
                   ),
                 ),
+                Center(
+                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Don't have an account?",
+                        style: TextStyle(color: kButtonsColor),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SignupView(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          'Signup',
+                          style: TextStyle(
+                            color: kButtonsColor,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  
+                  
+                )
               ],
             ),
           ),
